@@ -29,14 +29,44 @@
         .btn:hover {
             background-color: #45a049;
         }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .image-container img {
+            margin: 0 10px;
+            max-width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .telegram-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #0088cc;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .telegram-btn:hover {
+            background-color: #0077b5;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Our Minecraft Server</h1>
         <p>Click the button below to start the server on Aternos</p>
+        <div class="image-container">
+            <img src="https://example.com/minecraft1.jpg" alt="Minecraft Image 1">
+            <img src="https://example.com/minecraft2.jpg" alt="Minecraft Image 2">
+        </div>
         <a href="https://aternos.org/go/" class="btn">Start Server</a>
+        <br><br>
+        <a href="https://t.me/your_telegram_channel" class="telegram-btn">Join our Telegram Channel</a>
     </div>
 </body>
 </html>
-
