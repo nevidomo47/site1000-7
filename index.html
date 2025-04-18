@@ -1,117 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sayori Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #3d9949;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: black;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: black;
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .image-container img {
-            margin: 0 10px;
-            max-width: 100px;
-            height: auto;
-            border-radius: 5px;
-        }
-        .telegram-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #0088cc;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .telegram-btn:hover {
-            background-color: #0077b5;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Меню магазина</title>
+<style>
+table {
+width: 70%;
+border-collapse: collapse;
+margin: 20px auto;
+}
+th, td {
+border: 1px solid #444;
+padding: 10px;
+text-align: center;
+}
+th {
+background-color: #eee;
+}
+caption {
+font-size: 1.5em;
+margin-bottom: 10px;
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Our Minecraft Server</h1>
-        <p>Click the button below to start the server on Aternos</p>
-        <div class="image-container">
-            <img src="data:image/webp;base64,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"weight:30px>
-            <img src="https://tse4.mm.bing.net/th?id=OIG3.UpRfWLDKRXKRBnkV23zu&pid=ImgGn">
-        </div>
-        <a href="https://aternos.org/go/" class="btn">Start Server</a>
-        <br><br>
-        <a href="https://t.me/BeluCraft" class="telegram-btn">Join our Telegram Channel</a>
-    </div>
+<table>
+<caption>Меню магазина</caption>
+<tr>
+<th>Категория</th>
+<th>Название</th>
+<th>Описание</th>
+<th>Цена</th>
+</tr>
+<tr>
+<td>Фрукты</td>
+<td>Яблоко</td>
+<td>Свежие зеленые яблоки</td>
+<td>50 грн/кг</td>
+</tr>
+<tr>
+<td>Овощи</td>
+<td>Морковь</td>
+<td>Сочная и сладкая</td>
+<td>30 грн/кг</td>
+</tr>
+<tr>
+<td>Молочные продукты</td>
+<td>Молоко</td>
+<td>1 литр, пастеризованное</td>
+<td>60 грн</td>
+</tr>
+<tr>
+<td>Выпечка</td>
+<td>Хлеб</td>
+<td>Свежий ржаной хлеб</td>
+<td>35 грн</td>
+</tr>
+</table>
 </body>
-    
-    <p> Sayori Craft это тот сервер там где можно отдохнуть тут есть грифы и обновление почти каждую неделю. Наша цель развить этот проект ведь с самого начала сервер делался для души и для себя возможно он не лучший и не будет лучшим но для нас создателей этот сервер всегда будет любимым и самым родным.Ведь тут есть частичка каждого из нас.</p>
-    <h1>Со всем уважением команда Sayori Craft</h1>
-    <h1>КОРОТКО О НАС</h1>
-    <p>Мы начали делать наш сервер более девяти месяцев назад.
-    На данный момент в нашей команде 3 глав. админа и 1 модератор для вакансий админа или модератора тг " https://t.me/Wonderfullwold "(не кликабельно. скопируйте и вставьте в браузер) ПИШИТЕ свободный набор по умениям и т.д.</p>
-    <h1>Мы Решили Что</h1>
-    <p>У нас на сервере будет разрешено гриферство и анархия..(это к веселому не приведет)...
-    НО будет весело</p>\>
-    <div class="background">
-     <img src="https://tse3.mm.bing.net/th?id=OIG4.jVefOiwUey6e9pdSVGWm&pid=ImgGn">
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Відео на сайті</title>
-</head>
-<body>
-
-
-</body>
-    <h1>Данные о Сервере</h1>
-    <p>ip:BelugaCraft.aternos.me:11145
-    Версия:1.16.5 (без разницы корня желательно vanilla) 
-    Корень Сервера: BUKKIT (для работы модов) </p>
-    <h1>Инструкция для захода на сервер</h1>
-    <p>На телефоне необходима программа PojavLauncher
-    Устанавливаете ее через Google Play или через App Store
-    В верхнем углу екрана есть есть название акаунта у меня Uptodown</p>
-    <img scr="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpojavlauncher-minecraft-java-edition-for-android.ru.uptodown.com%2Fandroid&psig=AOvVaw0QyGKv79tchFtLYCGMH4Hb&ust=1731673728882000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCIDcvZ7p24kDFQAAAAAdAAAAABAE"weight:30px>
-        <p>Это ваш ник на сервере если хотите поменять нажмите на него затем на local и там вписуете тот какой больше нравиться
-        Теперь над кнопкой Play тобиш Играть есть карандаш нажимаете на него и выбыраете нужную версию на данный момент 1.20.1
-        После чего нажимаем сохранить и играть. У вас откроеться компьютерная версия игры нажмите на сетевую игру
-        После чего есть два варианта зайти на сервер: 1)можно зайти через прямое подключение тогда просто вводите айпи и попадаете на сервер второй вариант не сложнее первого но тоже требует пары действий 2) нажимаете на кнопку добавить сервер вводите айпи и имя сервера (тут любое какое захотите) и нажимаете подключиться после чего также попадаете на сервер
-        </p>
-    <h1>НОВОВЕДЕНИЯ</h1>
-    <p>Сервер всегда открыт! регистрация! новый спавн! и целая КУЧА ВСЕГО!</p>
-    СЕРВЕР ЗАКРЫТ НА МЕСЯЦ ИЛИ БОЛЬШЕ ПО ТЕХНИЧЕСКИМ НЕПОЛАДКАМ!
-    
-    <h1>Приятной игры на нашем сервере!</h1>
-
-    <h1>Привет, мир!</h1>
-
-
 </html>
-        
