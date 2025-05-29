@@ -12,7 +12,7 @@ header {
     text-align: center;
     padding: 50px 20px;
     background: rgba(0, 0, 0, 0.7);
-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
 
 }
 
@@ -55,6 +55,7 @@ section ul {
 }
 
 section img {
+    box-shadow: 0 3px 6px rgba(60, 60, 60, 0.16);
     max-width: 100%;
     height: auto;
     margin: 20px 0;
